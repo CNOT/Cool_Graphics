@@ -1,0 +1,523 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     22137,        514]
+NotebookOptionsPosition[     21294,        480]
+NotebookOutlinePosition[     21631,        495]
+CellTagsIndexPosition[     21588,        492]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.6087243449576063`*^9, 3.608724355509283*^9}, {
+  3.608724526346483*^9, 3.6087245767736797`*^9}, {3.608724625564262*^9, 
+  3.608724685935627*^9}, {3.6087247500232973`*^9, 3.6087247642481537`*^9}, {
+  3.608724804458946*^9, 3.6087248100904016`*^9}, {3.608724873017132*^9, 
+  3.608724882971348*^9}, {3.6087249812805862`*^9, 3.608725055221916*^9}, {
+  3.608725102474164*^9, 3.60872513578293*^9}, {3.608725211683756*^9, 
+  3.6087253206320553`*^9}, {3.608725494365898*^9, 3.608725494606778*^9}, {
+  3.608725526891179*^9, 3.608725607383951*^9}, {3.608725652436922*^9, 
+  3.608725656316298*^9}, {3.6087256869678097`*^9, 3.6087257793894176`*^9}, {
+  3.608725876156416*^9, 3.608725917743354*^9}, {3.6087259522535686`*^9, 
+  3.608725965707885*^9}, {3.608726006541144*^9, 3.608726093249359*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`\[Theta]$$ = 0, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`\[Theta]$$], 0, 10 Pi, 0.1}}, Typeset`size$$ = {
+    576., {285., 291.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`\[Theta]$21046$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`\[Theta]$$ = 0}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`\[Theta]$$, $CellContext`\[Theta]$21046$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Show[
+        Graphics[
+         Transpose[{
+           Table[
+            
+            RGBColor[(1 - $CellContext`r^2)^Rational[1, 2], $CellContext`r 
+             Sin[$CellContext`\[Theta]$$], $CellContext`r 
+             Cos[$CellContext`\[Theta]$$]], {$CellContext`r, 0.01, 1, 0.02}], 
+           
+           Table[
+            
+            Disk[{$CellContext`r 
+              Cos[(-$CellContext`\[Theta]$$) (
+                 2 - $CellContext`r)], $CellContext`r 
+              Sin[(-$CellContext`\[Theta]$$) (
+                 2 - $CellContext`r)]}, $CellContext`r/100], {$CellContext`r, 
+             0.01, 1, 0.02}]}], Background -> Black], 
+        PlotRange -> {{-1, 1}, {-1, 1}}, ImageSize -> Large], 
+      "Specifications" :> {{$CellContext`\[Theta]$$, 0, 10 Pi, 0.1}}, 
+      "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{623., {340., 347.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.6087246868671503`*^9, 3.6087247662054567`*^9, 3.608724810693069*^9, 
+   3.60872488364023*^9, {3.6087250101023197`*^9, 3.608725030905325*^9}, {
+   3.6087252353076677`*^9, 3.608725251484313*^9}, 3.608725285632923*^9, 
+   3.608725576088017*^9, 3.60872560863297*^9, 3.608725656928319*^9, 
+   3.608725689806901*^9, 3.608725918376398*^9, 3.608725968295876*^9, 
+   3.608726044693947*^9, 3.608726078558317*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Disk", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"r", ",", "0"}], "}"}], ",", 
+   FractionBox["2", "100"]}], "]"}]], "Input",
+ CellChangeTimes->{{3.608724792766026*^9, 3.6087247929815807`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Disk", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"r", ",", "0"}], "}"}], ",", 
+   FractionBox["1", "50"]}], "]"}]], "Output",
+ CellChangeTimes->{{3.6087247856930323`*^9, 3.608724793452908*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Animate", "[", 
+  RowBox[{
+   RowBox[{"Show", "[", 
+    RowBox[{
+     RowBox[{"Graphics", "[", 
+      RowBox[{
+       RowBox[{"Transpose", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"Table", "[", 
+           RowBox[{
+            RowBox[{"RGBColor", "[", 
+             RowBox[{
+              SqrtBox[
+               RowBox[{"1", "-", 
+                SuperscriptBox["r", "2"]}]], ",", 
+              RowBox[{"r", " ", 
+               RowBox[{"Sin", "[", "\[Theta]", "]"}]}], ",", 
+              RowBox[{"r", " ", 
+               RowBox[{"Cos", "[", "\[Theta]", "]"}]}]}], "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"r", ",", "0.01", ",", "1", ",", "0.02"}], "}"}]}], 
+           "]"}], ",", 
+          RowBox[{"Table", "[", 
+           RowBox[{
+            RowBox[{"Disk", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"r", " ", 
+                 RowBox[{"Cos", "[", 
+                  RowBox[{
+                   RowBox[{"-", "2"}], 
+                   RowBox[{"(", 
+                    RowBox[{"1", "-", "r"}], ")"}], "\[Theta]"}], "]"}]}], 
+                ",", 
+                RowBox[{"r", " ", 
+                 RowBox[{"Sin", "[", 
+                  RowBox[{
+                   RowBox[{"-", "2"}], 
+                   RowBox[{"(", 
+                    RowBox[{"1", "-", "r"}], ")"}], "\[Theta]"}], "]"}]}]}], 
+               "}"}], ",", 
+              FractionBox["r", "60"]}], "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"r", ",", "0.01", ",", "1", ",", "0.02"}], "}"}]}], 
+           "]"}]}], "}"}], "]"}], ",", 
+       RowBox[{"Background", "\[Rule]", "Black"}]}], "]"}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"-", "1"}], ",", "1"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"-", "1"}], ",", "1"}], "}"}]}], "}"}]}], ",", 
+     RowBox[{"ImageSize", "\[Rule]", "1000"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\[Theta]", ",", "0", ",", 
+     RowBox[{"100", "\[Pi]"}], ",", 
+     FractionBox["\[Pi]", "40"]}], "}"}], ",", 
+   RowBox[{"DefaultDuration", "\[Rule]", "180"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.608726125221477*^9, 3.6087264628862*^9}, {
+  3.608726493200426*^9, 3.608726590057015*^9}, {3.6087267018811207`*^9, 
+  3.608726702796452*^9}, {3.608727335015016*^9, 3.608727341183008*^9}, {
+  3.608727464265267*^9, 3.608727472468657*^9}, {3.60872810734993*^9, 
+  3.6087281413561077`*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`\[Theta]$$ = Rational[11, 5] Pi, 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`\[Theta]$$], 0, 100 Pi, Rational[1, 40] Pi}}, 
+    Typeset`size$$ = {1000., {497., 503.}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`\[Theta]$133558$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`\[Theta]$$ = 0}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`\[Theta]$$, $CellContext`\[Theta]$133558$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Show[
+        Graphics[
+         Transpose[{
+           Table[
+            
+            RGBColor[(1 - $CellContext`r^2)^Rational[1, 2], $CellContext`r 
+             Sin[$CellContext`\[Theta]$$], $CellContext`r 
+             Cos[$CellContext`\[Theta]$$]], {$CellContext`r, 0.01, 1, 0.02}], 
+           
+           Table[
+            
+            Disk[{$CellContext`r 
+              Cos[(-2) (
+                 1 - $CellContext`r) $CellContext`\[Theta]$$], $CellContext`r 
+              Sin[(-2) (
+                 1 - $CellContext`r) $CellContext`\[Theta]$$]}, \
+$CellContext`r/60], {$CellContext`r, 0.01, 1, 0.02}]}], Background -> Black], 
+        PlotRange -> {{-1, 1}, {-1, 1}}, ImageSize -> 1000], 
+      "Specifications" :> {{$CellContext`\[Theta]$$, 0, 100 Pi, 
+         Rational[1, 40] Pi, DefaultDuration -> 180, 
+         AppearanceElements -> {
+          "ProgressSlider", "PlayPauseButton", "FasterSlowerButtons", 
+           "DirectionButton"}}}, 
+      "Options" :> {
+       ControlType -> Animator, AppearanceElements -> None, DefaultBaseStyle -> 
+        "Animate", DefaultLabelStyle -> "AnimateLabel", SynchronousUpdating -> 
+        True, ShrinkingDelay -> 360.}, "DefaultOptions" :> {}],
+     ImageSizeCache->{1047., {532., 539.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Animate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.608727473020337*^9, 3.608728143064509*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"a", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"Show", "[", 
+      RowBox[{
+       RowBox[{"Graphics", "[", 
+        RowBox[{
+         RowBox[{"Transpose", "[", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"Table", "[", 
+             RowBox[{
+              RowBox[{"RGBColor", "[", 
+               RowBox[{
+                SqrtBox[
+                 RowBox[{"1", "-", 
+                  SuperscriptBox["r", "2"]}]], ",", 
+                RowBox[{"r", " ", 
+                 RowBox[{"Sin", "[", "\[Theta]", "]"}]}], ",", 
+                RowBox[{"r", " ", 
+                 RowBox[{"Cos", "[", "\[Theta]", "]"}]}]}], "]"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"r", ",", "0.01", ",", "1", ",", "0.02"}], "}"}]}], 
+             "]"}], ",", 
+            RowBox[{"Table", "[", 
+             RowBox[{
+              RowBox[{"Disk", "[", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"r", " ", 
+                   RowBox[{"Cos", "[", 
+                    RowBox[{
+                    RowBox[{"-", "2"}], 
+                    RowBox[{"(", 
+                    RowBox[{"1", "-", "r"}], ")"}], "\[Theta]"}], "]"}]}], 
+                  ",", 
+                  RowBox[{"r", " ", 
+                   RowBox[{"Sin", "[", 
+                    RowBox[{
+                    RowBox[{"-", "2"}], 
+                    RowBox[{"(", 
+                    RowBox[{"1", "-", "r"}], ")"}], "\[Theta]"}], "]"}]}]}], 
+                 "}"}], ",", 
+                FractionBox["r", "60"]}], "]"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"r", ",", "0.01", ",", "1", ",", "0.02"}], "}"}]}], 
+             "]"}]}], "}"}], "]"}], ",", 
+         RowBox[{"Background", "\[Rule]", "Black"}]}], "]"}], ",", 
+       RowBox[{"PlotRange", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"-", "1"}], ",", "1"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"-", "1"}], ",", "1"}], "}"}]}], "}"}]}], ",", 
+       RowBox[{"ImageSize", "\[Rule]", "1000"}]}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\[Theta]", ",", "0", ",", 
+       RowBox[{"100", "\[Pi]"}], ",", 
+       FractionBox["\[Pi]", "40"]}], "}"}]}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.608727505255393*^9, 3.6087275440766993`*^9}, {
+  3.608728197092843*^9, 3.608728203579905*^9}}],
+
+Cell[BoxData["Export"], "Input",
+ CellChangeTimes->{{3.6087269629650793`*^9, 3.608726987825306*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Export", "[", 
+  RowBox[{"\"\<animated1.gif\>\"", ",", "a", ",", 
+   RowBox[{"\"\<DisplayDurations\>\"", "\[Rule]", "180"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.608727319792902*^9, 3.608727319804124*^9}, {
+   3.608727354535242*^9, 3.608727359474918*^9}, 3.608728282775343*^9}],
+
+Cell[BoxData["\<\"animated1.gif\"\>"], "Output",
+ CellChangeTimes->{3.6087273651888866`*^9, 3.608728039222857*^9, 
+  3.608729692357243*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"a", "\[LeftDoubleBracket]", "5", "\[RightDoubleBracket]"}]], "Input",\
+
+ CellChangeTimes->{{3.60872804418862*^9, 3.6087280479153557`*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   {RGBColor[
+    0.9999499987499375, 0.0030901699437494747`, 0.009510565162951536], 
+    DiskBox[{0.008108595808323734, -0.0058524075402551015`}, 
+     0.00016666666666666666`]}, 
+   {RGBColor[0.9995498987044118, 0.009270509831248424, 0.028531695488854605`],
+     DiskBox[{0.02443562181211528, -0.01740403363175548}, 0.0005]}, 
+   {RGBColor[0.998749217771909, 0.015450849718747373`, 0.04755282581475768], 
+    DiskBox[{0.040907485871251176`, -0.02875026260216393}, 
+     0.0008333333333333334]}, 
+   {RGBColor[0.9975469913743412, 0.02163118960624632, 0.06657395614066074], 
+    DiskBox[{0.05752224860407131, -0.03988973446303466}, 
+     0.0011666666666666665`]}, 
+   {RGBColor[0.995941765365827, 0.02781152949374527, 0.08559508646656382], 
+    DiskBox[{0.07427795928236997, -0.050821105505946935`}, 0.0015]}, 
+   {RGBColor[0.9939315871829408, 0.03399186938124422, 0.1046162167924669], 
+    DiskBox[{0.09117265595952381, -0.06154304839123837}, 
+     0.0018333333333333333`]}, 
+   {RGBColor[0.9915139938498094, 0.04017220926874317, 0.12363734711836996`], 
+    DiskBox[{0.10820436559928624`, -0.07205425223577024}, 
+     0.0021666666666666666`]}, 
+   {RGBColor[0.9886859966642595, 0.04635254915624212, 0.14265847744427304`], 
+    DiskBox[{0.12537110420524056`, -0.08235342269971978}, 
+     0.0025000000000000005`]}, 
+   {RGBColor[0.9854440623394105, 0.05253288904374107, 0.16167960777017612`], 
+    DiskBox[{0.14267087695090488`, -0.09243928207239474}, 
+     0.0028333333333333335`]}, 
+   {RGBColor[0.9817840903172143, 0.058713228931240015`, 0.18070073809607917`],
+     DiskBox[{0.1601016783104821, -0.10231056935706545`}, 
+     0.0031666666666666666`]}, 
+   {RGBColor[0.9777013859047148, 0.06489356881873896, 0.19972186842198225`], 
+    DiskBox[{0.17766149219024685`, -0.11196604035480964`}, 0.0035]}, 
+   {RGBColor[0.9731906288081488, 0.07107390870623792, 0.21874299874788533`], 
+    DiskBox[{0.1953482920605628, -0.1214044677473653}, 
+     0.0038333333333333336`]}, 
+   {RGBColor[0.9682458365518543, 0.07725424859373686, 0.23776412907378838`], 
+    DiskBox[{0.21316004108852304`, -0.1306246411789872}, 
+     0.004166666666666667]}, 
+   {RGBColor[0.9628603221651623, 0.08343458848123582, 0.2567852593996915], 
+    DiskBox[{0.2310946922712059, -0.13962536733730246`}, 
+     0.0045000000000000005`]}, 
+   {RGBColor[0.957026645397086, 0.08961492836873478, 0.27580638972559457`], 
+    DiskBox[{0.24915018856953905`, -0.14840547003316004`}, 
+     0.004833333333333334]}, 
+   {RGBColor[0.9507365565707464, 0.0957952682562337, 0.2948275200514976], 
+    DiskBox[{0.26732446304276425`, -0.15696379027947108`}, 
+     0.005166666666666667]}, 
+   {RGBColor[0.9439809320108113, 0.10197560814373266`, 0.3138486503774007], 
+    DiskBox[{0.2856154389834963, -0.16529918636903426`}, 
+     0.0055000000000000005`]}, 
+   {RGBColor[0.9367496997597597, 0.10815594803123162`, 0.33286978070330375`], 
+    DiskBox[{0.30402103005336695`, -0.17341053395134268`}, 
+     0.005833333333333334]}, 
+   {RGBColor[0.9290317540321213, 0.11433628791873056`, 0.3518909110292068], 
+    DiskBox[{0.3225391404192483, -0.18129672610836753`}, 
+     0.006166666666666667]}, 
+   {RGBColor[0.920814856526544, 0.12051662780622951`, 0.3709120413551099], 
+    DiskBox[{0.34116766489004663`, -0.1889566734293152}, 0.0065]}, 
+   {RGBColor[0.9120855223058855, 0.12669696769372846`, 0.389933171681013], 
+    DiskBox[{0.3599044890540599, -0.19638930408435204`}, 
+     0.006833333333333334]}, 
+   {RGBColor[0.9028288874421332, 0.1328773075812274, 0.408954302006916], 
+    DiskBox[{0.3787474894168915, -0.20359356389729424`}, 
+     0.007166666666666667]}, 
+   {RGBColor[0.8930285549745876, 0.13905764746872637`, 0.4279754323328191], 
+    DiskBox[{0.397694533539912, -0.21056841641725807`}, 0.0075]}, 
+   {RGBColor[0.8826664149042943, 0.1452379873562253, 0.4469965626587222], 
+    DiskBox[{0.41674348017926155`, -0.21731284298926618`}, 
+     0.007833333333333335]}, 
+   {RGBColor[0.8717224328879004, 0.15141832724372425`, 0.4660176929846252], 
+    DiskBox[{0.43589217942538555`, -0.22382584282380677`}, 
+     0.008166666666666666]}, 
+   {RGBColor[0.8601744009211155, 0.1575986671312232, 0.48503882331052833`], 
+    DiskBox[{0.4551384728430961, -0.23010643306534095`}, 0.0085]}, 
+   {RGBColor[0.8479976415061542, 0.16377900701872217`, 0.5040599536364314], 
+    DiskBox[{0.4744801936121502, -0.23615364885975504`}, 
+     0.008833333333333334]}, 
+   {RGBColor[0.8351646544245033, 0.1699593469062211, 0.5230810839623344], 
+    DiskBox[{0.4939151666683386, -0.24196654342075333`}, 
+     0.009166666666666667]}, 
+   {RGBColor[0.8216446920658588, 0.17613968679372008`, 0.5421022142882376], 
+    DiskBox[{0.5134412088450769, -0.24754418809518863`}, 
+     0.009500000000000001]}, 
+   {RGBColor[0.8074032449773781, 0.182320026681219, 0.5611233446141406], 
+    DiskBox[{0.5330561290154905, -0.25288567242732574`}, 
+     0.009833333333333333]}, 
+   {RGBColor[0.7924014134263012, 0.18850036656871794`, 0.5801444749400436], 
+    DiskBox[{0.5527577282349868, -0.257990104222035}, 0.010166666666666666`]}, 
+   {RGBColor[0.7765951326141569, 0.1946807064562169, 0.5991656052659468], 
+    DiskBox[{0.5725437998843053, -0.26285660960691215`}, 0.0105]}, 
+   {RGBColor[0.7599342076785331, 0.20086104634371585`, 0.6181867355918498], 
+    DiskBox[{0.5924121298130395, -0.26748433309332076`}, 
+     0.010833333333333334`]}, 
+   {RGBColor[0.7423610981186985, 0.2070413862312148, 0.6372078659177529], 
+    DiskBox[{0.612360496483621, -0.271872437636354}, 
+     0.011166666666666667`]}, 
+   {RGBColor[0.7238093671679028, 0.21322172611871376`, 0.6562289962436559], 
+    DiskBox[{0.6323866711157596, -0.2760201046937127}, 
+     0.011500000000000002`]}, 
+   {RGBColor[0.70420167565833, 0.2194020660062127, 0.6752501265695591], 
+    DiskBox[{0.6524884178313292, -0.27992653428349523`}, 
+     0.011833333333333335`]}, 
+   {RGBColor[0.6834471449936711, 0.22558240589371165`, 0.6942712568954621], 
+    DiskBox[{0.6726634937996939, -0.2835909450408972}, 
+     0.012166666666666666`]}, 
+   {RGBColor[0.6614378277661477, 0.2317627457812106, 0.7132923872213651], 
+    DiskBox[{0.692909649383465, -0.2870125742738173}, 0.0125]}, 
+   {RGBColor[0.6380438856379709, 0.23794308566870953`, 0.7323135175472683], 
+    DiskBox[{0.7132246282846813, -0.29019067801736526`}, 
+     0.012833333333333334`]}, 
+   {RGBColor[0.6131068422387732, 0.2441234255562085, 0.7513346478731713], 
+    DiskBox[{0.7336061676914037, -0.2931245310872703}, 
+     0.013166666666666667`]}, 
+   {RGBColor[0.5864298764558299, 0.25030376544370747`, 0.7703557781990744], 
+    DiskBox[{0.754051998424718, -0.29581342713218617`}, 0.0135]}, 
+   {RGBColor[0.5577633906953736, 0.2564841053312064, 0.7893769085249775], 
+    DiskBox[{0.774559845086136, -0.29825667868488925`}, 
+     0.013833333333333335`]}, 
+   {RGBColor[0.526782687642637, 0.2626644452187053, 0.8083980388508805], 
+    DiskBox[{0.7951274262053872, -0.3004536172123685}, 
+     0.014166666666666666`]}, 
+   {RGBColor[0.493051721424842, 0.2688447851062043, 0.8274191691767836], 
+    DiskBox[{0.815752454388595, -0.30240359316480214`}, 
+     0.014499999999999999`]}, 
+   {RGBColor[0.4559605246071199, 0.27502512499370324`, 0.8464402995026866], 
+    DiskBox[{0.8364326364668245, -0.30410597602342015`}, 
+     0.014833333333333334`]}, 
+   {RGBColor[0.41460824883255754`, 0.2812054648812022, 0.8654614298285898], 
+    DiskBox[{0.8571656736449995, -0.30556015434724837`}, 
+     0.015166666666666667`]}, 
+   {RGBColor[0.36755951898978195`, 0.2873858047687011, 0.8844825601544928], 
+    DiskBox[{0.8779492616511764, -0.30676553581873317`}, 0.0155]}, 
+   {RGBColor[0.3122498999199198, 0.2935661446562001, 0.9035036904803959], 
+    DiskBox[{0.8987810908861681, -0.30772154728824197`}, 
+     0.015833333333333335`]}, 
+   {RGBColor[0.24310491562286443`, 0.299746484543699, 0.9225248208062989], 
+    DiskBox[{0.919658846573511, -0.3084276348174386}, 0.016166666666666666`]}, 
+   {RGBColor[0.14106735979665894`, 0.30592682443119795`, 0.941545951132202], 
+    DiskBox[{0.940580208909764, -0.3088832637215307}, 0.0165]}},
+  Background->GrayLevel[0],
+  ImageSize->1000,
+  PlotRange->{{-1, 1}, {-1, 1}}]], "Output",
+ CellChangeTimes->{3.608728048467209*^9}]
+}, Open  ]]
+},
+WindowSize->{1847, 1053},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"9.0 for Linux x86 (64-bit) (November 20, 2012)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 831, 11, 32, "Input"],
+Cell[1413, 35, 2621, 54, 704, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4071, 94, 221, 6, 56, "Input"],
+Cell[4295, 102, 221, 6, 49, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4553, 113, 2579, 68, 105, "Input"],
+Cell[7135, 183, 2671, 56, 1088, "Output"]
+}, Open  ]],
+Cell[9821, 242, 2485, 66, 128, "Input"],
+Cell[12309, 310, 100, 1, 32, "Input"],
+Cell[CellGroupData[{
+Cell[12434, 315, 305, 5, 32, "Input"],
+Cell[12742, 322, 139, 2, 32, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12918, 329, 162, 3, 32, "Input"],
+Cell[13083, 334, 8195, 143, 1015, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
