@@ -9,7 +9,7 @@ p = [Ω,aᵤ,qᵤ]
 
 #Initial conditions
 u₀ = 2*rand(6)-ones(6)
-tspan = (0.0, 10π)
+tspan = (0.0, 20π)
 
 # Trap function
 function PaulTrap!(du,u,p,t)
@@ -23,12 +23,12 @@ end
 prob = ODEProblem(PaulTrap!, u₀, tspan)
 sol = solve(prob, Tsit5())
 
-xs = [sol.u[i][1] for i in 1:length(sol.u)]
-ys = [sol.u[i][2] for i in 1:length(sol.u)]
-zs = [sol.u[i][3] for i in 1:length(sol.u)]
-vxs = [sol.u[i][4] for i in 1:length(sol.u)]
-vys = [sol.u[i][5] for i in 1:length(sol.u)]
-vzs = [sol.u[i][6] for i in 1:length(sol.u)]
+xs = [sol.(0:0.1:20π)[i][1] for i in 1:length(sol.(0:0.1:20π))]
+ys = [sol.(0:0.1:20π)[i][2] for i in 1:length(sol.(0:0.1:20π))]
+zs = [sol.(0:0.1:20π)[i][3] for i in 1:length(sol.(0:0.1:20π))]
+vxs = [sol.(0:0.1:20π)[i][4] for i in 1:length(sol.(0:0.1:20π))]
+vys = [sol.(0:0.1:20π)[i][5] for i in 1:length(sol.(0:0.1:20π))]
+vzs = [sol.(0:0.1:20π)[i][6] for i in 1:length(sol.(0:0.1:20π))]
 
 
 # Plot
@@ -37,21 +37,51 @@ vzs = [sol.u[i][6] for i in 1:length(sol.u)]
 
 # Animation
 
-points = Observable(Point2f[(u₀[1],u₀[2])])
-colors = Observable(Float64[])
-frames = 1:length(xs)
+frames = 16:length(xs)
 max_x = max(abs.(xs)...) 
 max_y = max(abs.(ys)...)
 max_z = max(abs.(zs)...)
-fig, ax = scatter(points, color = :blue, markersize = [1])
-limits!(ax, -1.2*max_x, 1.2*max_x, -1.2*max_y, 1.2*max_y)
-record(fig, "Paul_Trap/PaulTrap_animation.mp4", frames;
+
+# XY plane
+points = Observable(Point2f[(xs[i],ys[i]) for i in 1:15])
+fig_xy, ax_xy = scatterlines(points, color=15:-1:1, colormap=:viridis, markersize=0.5*(1:15))
+limits!(ax_xy, -1.2*max_x, 1.2*max_x, -1.2*max_y, 1.2*max_y)
+record(fig_xy, "Paul_Trap/PaulTrap_xy_animation.mp4", frames;
 framerate=30) do frame
     new_point = Point2f(xs[frame], ys[frame])
+    popfirst!(points[])
     points[] = push!(points[], new_point)
-    colors = [(:blue, (2^i)/2^(frame+1)) for i in 1:frame+1]
-    scatterlines!(points, color=:white, markersize=repeat([2], frame + 1))
-    scatterlines!(points, color = colors, markersize = repeat([1],frame+1))
+    scatterlines!(points, color=15:-1:1, colormap=:viridis, markersize=0.5*(1:15))
 
     # arrows!([xs[frame]],[ys[frame]],[vxs[frame]],[vys[frame]],lengthscale = 0.2, arrowcolor = colors)
 end
+
+
+# YZ Plane
+points = Observable(Point2f[(ys[i], zs[i]) for i in 1:15])
+fig_yz, ax_yz = scatterlines(points, color=15:-1:1, colormap=:viridis, markersize=0.5*(1:15))
+limits!(ax_yz, -1.2 * max_y, 1.2 * max_y, -1.2 * max_z, 1.2 * max_z)
+record(fig_yz, "Paul_Trap/PaulTrap_yz_animation.mp4", frames;
+    framerate=30) do frame
+    new_point = Point2f(ys[frame], zs[frame])
+    popfirst!(points[])
+    points[] = push!(points[], new_point)
+    scatterlines!(points, color=15:-1:1, colormap=:viridis, markersize=0.5*(1:15))
+
+    # arrows!([xs[frame]],[ys[frame]],[vxs[frame]],[vys[frame]],lengthscale = 0.2, arrowcolor = colors)
+end
+
+# ZX Plane
+points = Observable(Point2f[(zs[i], xs[i]) for i in 1:15])
+fig_zx, ax_zx = scatterlines(points, color=15:-1:1, colormap=:viridis, markersize=0.5*(1:15))
+limits!(ax_zx, -1.2 * max_z, 1.2 * max_z, -1.2 * max_x, 1.2 * max_x)
+record(fig_zx, "Paul_Trap/PaulTrap_zx_animation.mp4", frames;
+    framerate=30) do frame
+    new_point = Point2f(zs[frame], xs[frame])
+    popfirst!(points[])
+    points[] = push!(points[], new_point)
+    scatterlines!(points, color=15:-1:1, colormap=:viridis, markersize=0.5*(1:15))
+
+    # arrows!([xs[frame]],[ys[frame]],[vxs[frame]],[vys[frame]],lengthscale = 0.2, arrowcolor = colors)
+end
+
