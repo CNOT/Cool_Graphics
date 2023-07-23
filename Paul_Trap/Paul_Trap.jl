@@ -1,6 +1,6 @@
 using OrdinaryDiffEq
 using GLMakie
-
+using CairoMakie
 #Parameters, we can later replace them with sliders
 Ω = 3.0
 aᵤ = 0.1
@@ -32,8 +32,11 @@ vzs = [sol.(0:0.1:20π)[i][6] for i in 1:length(sol.(0:0.1:20π))]
 
 
 # Plot
-# using Plots
-# plot(sol, vars=(1,2) , linewidth=2, title="Paul Trap", xaxis="x", yaxis="y")
+
+plt_xy , ax_fig_xy = scatterlines(xs,ys, markersize = 1,color = [vxs[i]^2 + vys[i]^2 for i in 1:length(xs)], colormap = :imola)
+plt_yz, ax_fig_yz = scatterlines(ys, zs, markersize=1, color=[vzs[i]^2 + vys[i]^2 for i in 1:length(xs)], colormap=:imola)
+plt_zx, ax_fig_zx = scatterlines(zs, xs, markersize=1, color=[vxs[i]^2 + vzs[i]^2 for i in 1:length(xs)], colormap=:imola)
+
 
 # Animation
 
